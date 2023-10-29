@@ -18,7 +18,7 @@ public class GitText {
         return nums;
     }
 
-//解密第一步，将字符串的每个字符转化为ASCII值并进行减值操作
+//解密的第一步，将字符串的每个字符转化为ASCII值并进行减值操作
     public static char[] encryptFirst1(char []nums){
 
         for(int i=0;i<nums.length;i++){
