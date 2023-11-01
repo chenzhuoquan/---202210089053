@@ -92,6 +92,28 @@ public class GitText {
         return false;
 
     }
+
+   
+ public static String Password(int length) {
+        String password = RandomStringUtils.randomAlphanumeric(length);
+
+        while (!isPassword(password)) {
+            password = RandomStringUtils.randomAlphanumeric(length);
+        }
+
+        return password;
+    }
+
+
+
+private static boolean isPassword(String password) {
+        String regular = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]+$";
+        Pattern pattern = Pattern.compile(regular);
+        Matcher matcher = pattern.matcher(password);
+        return matcher.matches();
+    }
+
+
     public static void menu(){
         System.out.println("===========================");
         System.out.println("      欢迎使用密码管理系统     ");
@@ -104,7 +126,7 @@ public class GitText {
 
 
 
-    public static void  main(String[] args) {
+     public static void  main(String[] args) {
 
         int input=0;
         do{
@@ -137,9 +159,42 @@ public class GitText {
                         String s4 = stringBuffer1.reverse().toString();
                         char[] chars = encryptSecond(s4.toCharArray());
                         char[] chars2 = encryptFirst1(chars);
-                        String s5 = String.valueOf(chars2);
-                        System.out.println("解密后的结果是:"+s5);
+                        String s7 = String.valueOf(chars2);
+                        System.out.println("解密后的结果是:"+s7);
                         break;
+
+                case 3: System.out.println("===========================");
+                        System.out.println("      欢迎使用密码管理系统     ");
+                        System.out.println("===========================");
+                        System.out.print("请输入要判断的数字密码:");
+                        Scanner scanner3=new Scanner(System.in);
+                        String s6 = scanner3.nextLine();
+                        char[]s5=new char[s6.length()];
+                        for (int i=0;i<s6.length();i++){
+                            s5[i]=s6.charAt(i);
+                        }
+                        if(s5.length<8){
+                            System.out.println("低强度:长度小于8");
+                        }else if(judgeNum(s5)||judgeChar(s5)){
+                            System.out.println("低强度:长度大于8并且只有一种字符类型");
+                        }else if((judgeNum1(s5)&&judgeBChar(s5)&&judgeSChar(s5))){
+                            System.out.println("高强度:至少有一个数字、一个小写字母、一个大写字母");
+                        }
+                        else if((judgeNum1(s5)&&judgeChar1(s5))){
+                            System.out.println("中强度:有一个数字和一个字母");
+                        }
+                        break;
+
+                case 4: System.out.println("===========================");
+                        System.out.println("      欢迎使用密码管理系统     ");
+                        System.out.println("===========================");
+                        System.out.print("请输入要给定的密码长度:");
+                        Scanner scanner4=new Scanner(System.in);
+                        int i = scanner4.nextInt();
+                        String password =Password(i);
+                        System.out.println("给定的长度为:"+i+"并且生成之后的高强度密码为:"+password);
+
+
             }
 
         }while(input!=5);
