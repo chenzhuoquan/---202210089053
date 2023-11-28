@@ -32,7 +32,7 @@ public class GitText {
         }
         return nums;
     }
-    //加密第二步，将字符数组中的首尾进行调换
+    //加密第二步，将字符数组中的首尾进行调换.
     public static char[] encryptSecond(char[] nums2){
         char i=' ';
         int length=nums2.length;
@@ -117,12 +117,12 @@ private static boolean isPassword(String password) {
 
     public static void menu(){
         System.out.println("===========================");
-        System.out.println("      欢迎使用密码管理系统     ");
+        System.out.println("      欢迎黎国栋使用密码管理系统     ");
         System.out.println("===========================");
         System.out.println("         请选择操作:         ");
-        System.out.println("     1.加密     2.解密      ");
+        System.out.println("     1.加密功能     2.解密功能     ");
         System.out.println("       3.判断密码强度        ");
-        System.out.println("     4.密码生成  5.退出      ");
+        System.out.println("     4.密码生成    5.退出      ");
     }
 
 
