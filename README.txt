@@ -117,7 +117,7 @@ private static boolean isPassword(String password) {
 
     public static void menu(){
         System.out.println("===========================");
-        System.out.println("      欢迎黎国栋使用密码管理系统     ");
+        System.out.println("      欢迎陈卓权使用密码管理系统     ");
         System.out.println("===========================");
         System.out.println("         请选择操作:         ");
         System.out.println("     1.加密功能     2.解密功能     ");
