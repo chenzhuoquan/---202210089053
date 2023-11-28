@@ -32,7 +32,7 @@ public class GitText {
         }
         return nums;
     }
-    //加密第二步，将字符数组中的首尾进行调换.
+    //加密第二步，将字符数组中的首尾进行调换
     public static char[] encryptSecond(char[] nums2){
         char i=' ';
         int length=nums2.length;
