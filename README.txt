@@ -117,12 +117,12 @@ private static boolean isPassword(String password) {
 
     public static void menu(){
         System.out.println("===========================");
-        System.out.println("      欢迎黎国栋陈卓权使用密码管理系统     ");
+        System.out.println("欢迎来到好用的密码管理系统 ");
         System.out.println("===========================");
-        System.out.println("         请选择操作:         ");
-        System.out.println("     1.加密功能     2.解密功能     ");
+        System.out.println("         请选择操作:        ");
+        System.out.println("  1.加密功能     2.解密功能  ");
         System.out.println("       3.判断密码强度        ");
-        System.out.println("     4.密码生成    5.退出      ");
+        System.out.println("  4.密码生成     5.退出      ");
     }
 
 
@@ -137,7 +137,7 @@ private static boolean isPassword(String password) {
             input=scanner.nextInt();
             switch (input){
                 case 1: System.out.println("===========================");
-                        System.out.println("      欢迎使用密码管理系统     ");
+                        System.out.println("    欢迎使用密码管理系统     ");
                         System.out.println("===========================");
                         System.out.print("请输入要加密的数字密码:");
                         Scanner scanner1=new Scanner(System.in);
@@ -151,7 +151,7 @@ private static boolean isPassword(String password) {
 
 
                 case 2: System.out.println("===========================");
-                        System.out.println("      欢迎使用密码管理系统     ");
+                        System.out.println("    欢迎使用密码管理系统     ");
                         System.out.println("===========================");
                         System.out.print("请输入要解密的数字密码:");
                         Scanner scanner2=new Scanner(System.in);
@@ -165,7 +165,7 @@ private static boolean isPassword(String password) {
                         break;
 
                 case 3: System.out.println("===========================");
-                        System.out.println("      欢迎使用密码管理系统     ");
+                        System.out.println("    欢迎使用密码管理系统     ");
                         System.out.println("===========================");
                         System.out.print("请输入要判断的数字密码:");
                         Scanner scanner3=new Scanner(System.in);
@@ -187,7 +187,7 @@ private static boolean isPassword(String password) {
                         break;
 
                 case 4: System.out.println("===========================");
-                        System.out.println("      欢迎使用密码管理系统     ");
+                        System.out.println("    欢迎使用密码管理系统     ");
                         System.out.println("===========================");
                         System.out.print("请输入要给定的密码长度:");
                         Scanner scanner4=new Scanner(System.in);
