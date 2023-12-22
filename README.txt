@@ -191,7 +191,7 @@ private static boolean isPassword(String password) {
                         System.out.println("===========================");
                         System.out.print("请输入要给定的密码长度:");
                         Scanner scanner4=new Scanner(System.in);
-                        int i = scanner4.nextInt();
+                        int i = 6;
                         String password =Password(i);
                         System.out.println("给定的长度为:"+i+"并且生成之后的高强度密码为:"+password);
 
